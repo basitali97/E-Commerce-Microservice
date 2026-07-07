@@ -8,18 +8,18 @@ A production-ready, distributed e-commerce backend built with **Java Spring Boot
 
 | Service | Description | Repository |
 |---|---|---|
-| API Gateway | Single entry point, routing & load balancing | [https://github.com/basitali97/API-Gateway.git](#) |
-| Service Discovery | Eureka-based service registry | [Link](#) |
-| Product Service | Product catalogue & inventory management | [Link](#) |
-| User Auth Service | Authentication & authorization (JWT + OAuth2) | [Link](#) |
-| Payment Service | Stripe payment processing & webhooks | [Link](#) |
-| Email Service | Event-driven email notifications via Kafka | [Link](#) |
+| API Gateway | Single entry point, routing & load balancing | [Link](https://github.com/basitali97/API-Gateway.git) |
+| Service Discovery | Eureka-based service registry | [Link](https://github.com/basitali97/Service-Discovery.git) |
+| Product Service | Product catalogue & inventory management | [Link](https://github.com/basitali97/Ecommerce-ProductService.git) |
+| User Auth Service | Authentication & authorization (JWT + OAuth2) | [Link](https://github.com/basitali97/Ecommerce-UserAuth.git) |
+| Payment Service | Stripe payment processing & webhooks | [Link](https://github.com/basitali97/Payment-Service.git) |
+| Email Service | Event-driven email notifications via Kafka | [Link](https://github.com/basitali97/EmailService.git) |
 
 ---
 
 ## 🏗️ Architecture Overview
 
-
+---
 
 Client
 │
@@ -36,8 +36,11 @@ API Gateway  ◄──── Service Discovery (Eureka)
 │         ▼
 └──► Email Service  ◄── Kafka Consumer
 
+---
 
 ### Request Flow
+
+---
 
 Client sends request
 │
@@ -56,9 +59,6 @@ Payment Service publishes event to Kafka Topic
 │
 ▼
 Email Service consumes event ──► Sends confirmation email
-
-
-
 
 ---
 
